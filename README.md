@@ -21,21 +21,20 @@ Some permutations to the **TICKET-PULL** Event:
 
 ### METHODS
 - set up ticket roll
-- pull a ticket
-- status of ticket roll
+- pull a ticket to be sold to ticket holder and ticket barrell
+- status of unsold tickets on ticket roll
 
 
 
 ### INSTANCE VARIABLES
 - number of tickets in roll
-- 
 
 
 **TICKET-BARRELL** -- container of all **TICKETS** taken from a **TICKET-ROLL** for the purposes of that specific **EVENT**.
 
 ### METHODS
 - hold tickets for drawing
-
+- provide random ticket for ticket pull
 
 
 **TICKET-PULL** -- One instance of an event.
@@ -64,7 +63,7 @@ Some permutations to the **TICKET-PULL** Event:
 
 
 ### METHODS
-- check pulled tickets
+- check owned tickets
 - ckeck tickets for winning status
 - buy tickets
 - delete tickets
@@ -72,6 +71,8 @@ Some permutations to the **TICKET-PULL** Event:
 **TICKET-ATTENDANT** -- The agent that controls the flow of the **TICKET-PULL** event 
 
 ### METHODS
+- activate ticket pull
 - call out for event
 - check validity of winning claim
+- assign winning tickets to prizes
 
