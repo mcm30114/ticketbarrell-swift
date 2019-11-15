@@ -19,15 +19,59 @@ Some permutations to the **TICKET-PULL** Event:
 
 **TICKET-ROLL** -- Source of all tickets.  Sequence number can start at a particular number (Long INT) and have **NUMBER-OF-TICKETS** (Long INT) as the count of tickets available on the roll. **TICKET** numbers are sequential positive integers.
 
+### METHODS
+- set up ticket roll
+- pull a ticket
+- status of ticket roll
+
+
+
+### INSTANCE VARIABLES
+- number of tickets in roll
+- 
+
+
 **TICKET-BARRELL** -- container of all **TICKETS** taken from a **TICKET-ROLL** for the purposes of that specific **EVENT**.
+
+### METHODS
+- hold tickets for drawing
+
+
 
 **TICKET-PULL** -- One instance of an event.
 
+### METHODS
+- draw ticket
+
+### INSTANCE VARIABLES
+- number of tickets to pull
+
+
 **EVENT** -- A period of time where the process of the **TICKET-PULL** will be valid. There is usually a period where the tickets can be obtained ((**TICKET-PULL-OFFERING-START-DATE-TIME**) and ends (**TICKET-PULL-OFFERING-END-DATE-TIME**)) , the time of the event 
+
+### METHODS
+- set start and end time of selling tickets
+- set start and end time of ticket pull
+- set start and end time of winning ticket claims
+
 
 **TICKET** -- an instance of a ticket. A **TICKET** has 2 parts to it, one part stays with the event and is put into the **TICKET-BARRELL**. The other half is given to the **TICKET-HOLDER**.
 
+### METHODS
+- identifable unique number
+
 **TICKET-HOLDER** -- an event attendee who wishes to participate in the **EVENT**.  A **TICKET-HOLDER** can have one or more tickets, limited only to the amount of tickets left on the **TICKET-ROLL**. A **TICKET-HOLDER** has an identification (number, hash, ID, etc) similar to a limited profile. No PII information should be stored.
 
+
+### METHODS
+- check pulled tickets
+- ckeck tickets for winning status
+- buy tickets
+- delete tickets
+
 **TICKET-ATTENDANT** -- The agent that controls the flow of the **TICKET-PULL** event 
+
+### METHODS
+- call out for event
+- check validity of winning claim
 
